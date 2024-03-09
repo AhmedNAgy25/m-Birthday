@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>from Ahmed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Madimi One', cursive;
+            background-color: #ffebcd; /* PeachPuff */
+            text-align: center;
+            padding: 20px;
+        }
+
+        .toggle-label {
+            display: inline-block;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        /* Hide checkbox visually but remain accessible to screen readers */
+        .toggle-checkbox {
+            position: absolute;
+            left: -9999px;
+        }
+
+        /* Styles for unchecked checkbox */
+        .toggle-label::before {
+            content: "Show Image";
+            background-color: #007bff;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* Styles for checked checkbox */
+        .toggle-checkbox:checked + .toggle-label::before {
+            content: "Hide Image";
+            background-color: #dc3545;
+        }
+
+        /* Hide the image by default */
+        .h {
+            display: none;
+            max-width: 300px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Show the image when checkbox is checked */
+        .toggle-checkbox:checked ~ .box .h {
+            display: block;
+        }
+
+        .h-text {
+            color: #8b0000; /* DarkRed */
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        Happy Birthday Mahmoud
+    </div>
+    <br>
+    <div class="container">
+        <input type="checkbox" id="toggleCheckbox" class="toggle-checkbox">
+        <label for="toggleCheckbox" class="toggle-label"></label>
+        <div class="box">
+            <div class="c">
+                <!-- <input type="checkbox" id="tog"> -->
+            </div>
+            <img class="h" src="/900_787313sc7O_50th-birthday-chicken-cake.jpg" alt="cake">
+            <div class="h-text">Happy birth day!</div>
+        </div>
+    </div>
+</body>
+</html>
